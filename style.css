@@ -1,6 +1,8 @@
 body {
     background-color: white;
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 div#header {
@@ -10,7 +12,9 @@ div#header {
     justify-content: space-between;
     background-color: rgb(75,0,169);
     margin: 20px;
-    border-radius: 25px;
+    border-radius: 45px;
+    padding: 10px;
+    align-items: center;
 }
 
 div#header > nav > ul {
@@ -18,23 +22,42 @@ div#header > nav > ul {
     display: flex;
     flex-direction: row;
     padding-inline-start: 0;
-    margin-left: 10px;
+    gap: 25px;
+    padding-left: 5px;
+    font-size: 19px;
 }
 
 div#header > nav > ul > li > a {
     padding: 5px;
     text-decoration: none;
+    color: rgba(255, 255, 255,0.7);
+}
+
+a#logo {
+    text-decoration: none;
     color: white;
+    align-items: center;
+    display: flex;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 #logo > img {
     block-size: 50px;
+    order: 0;
+    margin-right: 5px;
 }
 
 div#header > button {
     border-radius: 25px;
-    width: 100px;
-    margin: 5px 10px 5px 5px;
+    width: 120px;
+    margin: 5px;
+    padding: 15px 20px;
+    text-transform: uppercase;
+    color: rgb(75,0,169);
+    font-weight: bold;
+    font-size: 14px;
 }
 
 div#main-banner {
@@ -47,33 +70,43 @@ div#main-banner {
 div#main-banner-top {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    
 }
 
-div#main-banner-top > div {
-    width: 40%
+div#main-banner-top-gap {
+    height: 20px;
 }
 
 img {
-    block-size: 400px;
+    block-size: 500px;
 }
 
 div#ctas-and-text {
     display: flex;
     flex-direction: column;
     margin: 30px;
+    width: 35%;
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 80px;
     color: white;
+    margin: 10px 0; 
+    font-weight: 800;
+}
+span#main-banner-text > h2 {
+    font-size: 60px;
+    color: white;   
+    margin: 10px 0; 
 }
 
 span#main-banner-text > p {
-    font-size: 25px;
+    font-size: 20px;
     color: white;
     text-wrap: wrap;
+    line-height: 30px;
 }
 
 button#try {
@@ -84,6 +117,7 @@ button#try {
     color: rgb(75,0,169);
     font-weight: bold;
     border-style: none;
+    text-transform: uppercase;
 }
 
 button#learn {
@@ -93,7 +127,10 @@ button#learn {
     width: 150px;
     color: white;
     text-wrap: nowrap;
+    text-transform: uppercase;
+    font-weight: 500;
 }
+
 
 div#main-banner-bottom {
     block-size: 100px;
@@ -109,10 +146,64 @@ div#main-banner-bottom {
 }
 
 div#main-banner-bottom > p {
-    font-size: 15px;
+    font-size: 16px;
     text-wrap: wrap;
     text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10px;
+}
 
+div#main-banner-diagonal-pill > p {
+
+    color: white;
+    background-color: rgb(103, 32, 190);
+    width: 100px;
+    border: solid 1px rgb(251, 250, 250,0.5);
+    border-radius: 25px;
+    padding: 10px;
+    position: absolute;
+    left: 80%;
+    transform: rotate(340deg);
+    text-align: center;
+}
+div.dot {
+    height: 120px;
+    width: 120px;
+    background-color: rgba(128, 103, 158, 0.3);
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute; 
+    top: 100px;
+  }
+
+div.top {
+  left: 0px;
+  top: 0px;
+  overflow: hidden;
+  }
+
+div.right {
+    left: 85px;
+    top: 0px;
+    overflow: hidden;
+  }
+
+div.left {
+    left: 43px;
+    top: 65px;
+    z-index: 20;
+  }
+
+  div.venn {
+    position: relative; 
+    bottom: 120px;
+    left: -80px;
+  }
+
+div#main-banner {
+    overflow: hidden;
 }
 
 div#text-block {
@@ -133,16 +224,17 @@ div#text-block > p {
 
 div#text-area-2 {
     text-align: center;
-    margin: 40px 100px;
+    margin: 40px 25%;
     padding: 30px;
 }
 
 div#text-area-2 > p {
     text-wrap: wrap;
+    line-height: 30px;
 }
 
 div#text-area-2 > h2 {
-    font-size: 30px;
+    font-size: 40px;
 }
 
 article {
@@ -150,8 +242,8 @@ article {
     width: 200px;
     font-size: 15px;
     text-wrap: wrap;
-    border: solid black 1px;
-    padding: 10px;
+    box-shadow: 0px 0px 5px 3px #E9EAE5;
+    padding: 20px;
     min-height: 200px;
     border-top-right-radius: 100px;
     
@@ -162,16 +254,20 @@ article > img#JS-logo {
     padding: 10px;
 }
 
-article > img#arrow {
-    block-size: 28px;
-    border: solid black 1px;
+div#arrow {
+    width: fit-content;
     border-radius: 40px;
     position: relative;
-    top: -20;
-    right:-20;
+    bottom: 90;
+    left:140;
     padding: 20px;
     margin: 5px;
     background-color: white;
+    box-shadow: 0px 0px 5px 3px #E9EAE5;
+}
+
+img#arrow {
+    block-size: 28px;
 }
 
 article > h3 {
